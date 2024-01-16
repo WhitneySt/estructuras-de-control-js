@@ -38,3 +38,38 @@ switch (topping.toLocaleLowerCase()) {
 }
 
 alert("El precio del helado es :" + precioTotalHelado);
+
+//3.
+const numero1 = prompt("Ingrese el primero número");
+const numero2 = prompt("Ingrese el segundo número");
+
+if (numero1 > numero2) {
+    console.log("El primer número es el mayor")
+} else if (numero2 > numero1) {
+    console.log("El segundo número es el mayor")
+} else {
+    console.log("Ambos números son iguales")
+}
+
+//4.
+
+const cantidadNotas = 5;
+let sumatoriaNotas = 0;
+
+for (let index = 0; index < cantidadNotas; index++) {
+    const notaString = prompt("Por favor ingrese la nota de la actividad" + Number(index + 1));
+    const nota = Number(notaString);
+    sumatoriaNotas = sumatoriaNotas + nota;
+
+    console.log("Nota Actividad ", Number(index + 1), " :", nota);
+}
+
+const promedioCalificacion = sumatoriaNotas / cantidadNotas;
+
+console.log(promedioCalificacion);
+
+if (promedioCalificacion< 6) {
+    console.log("El estudiante es suspendido");
+} else {
+    console.log("El estudiante es aprobado")
+}
